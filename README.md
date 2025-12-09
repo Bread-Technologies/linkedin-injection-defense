@@ -153,9 +153,9 @@ The judge marks "not thrown off" for:
 Each target uses:
 - `oneshot_qs` generator with `numq=150` (generates diverse questions)
 - `hardcoded` generator with 10 specific job qualification questions
-- `num_traj_per_stimulus=5` (5 trajectories per question)
+- `num_traj_per_stimulus=2` (2 trajectories per question)
 
-Total data points per target: ~800 trajectories (160 questions × 5 trajectories)
+Total data points per target: ~220 trajectories (110 questions × 2 trajectories)
 
 ### Baking Hyperparameters
 
@@ -169,7 +169,7 @@ Total data points per target: ~800 trajectories (160 questions × 5 trajectories
         "baked_adapter_config": {
             "r": 32,              # LoRA rank
             "lora_alpha": 16,
-            "lora_dropout": 0.05,
+            "lora_dropout": 0.00,
             "target_modules": "all-linear"
         }
     }
