@@ -14,7 +14,8 @@ load_dotenv()
 # Initialize clients
 openai_client = AsyncOpenAI(
     base_url="https://bapi.bread.com.ai/v1",
-    api_key=os.environ.get("BREAD_API_KEY")
+    api_key=os.environ.get("BREAD_API_KEY"),
+    max_retries=5
 )
 anthropic_client = AsyncAnthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
@@ -60,8 +61,8 @@ async def get_model_response(about_content: str, question: str, model_name: str)
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": question}
             ],
-            temperature=0.0,
-            max_tokens=500
+            temperature=1.0,
+            max_tokens=1500
         )
         return response.choices[0].message.content
     except Exception as e:
