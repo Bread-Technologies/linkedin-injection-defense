@@ -1,4 +1,4 @@
-I literally used this prompt to one-shot this whole project.
+I literally used this prompt to ~one-shot this whole project.
 
 ---
 
