@@ -318,7 +318,7 @@ def run_rollout_for_all_targets(target_names: List[str]):
         time.sleep(30)
 
 
-def setup_and_run_bake(target_names: List[str], bake_name: str = "injection_defense_bake3"):
+def setup_and_run_bake(target_names: List[str], bake_name: str = "injection_defense_bake4"):
     """Set up and run the multi-target bake."""
     print("\n" + "=" * 80)
     print("SETTING UP BAKE")
@@ -336,9 +336,9 @@ def setup_and_run_bake(target_names: List[str], bake_name: str = "injection_defe
             "template": "default",
             "overrides": {
                 "datasets": datasets,
-                "epochs": 1,
+                "epochs": 2,
                 "optimizer": {
-                    "learning_rate": 1e-3
+                    "learning_rate": 3e-3
                 },
                 "model": {
                     "baked_adapter_config": {
