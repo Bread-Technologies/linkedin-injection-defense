@@ -232,6 +232,6 @@ If post-bake results aren't better:
 
 - Base model: `Qwen/Qwen3-32B`
 - Judge model: `claude-sonnet-4-5-20250929`
-- All evaluations use temperature=0 for consistency
+- All evaluations use temperature=1.0 for consistency
 - Test set is completely separate from training data
 
