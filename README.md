@@ -4,7 +4,7 @@ This project demonstrates using prompt baking to train a language model to resis
 
 ## Overview
 
-Baking is a finetuning technique that teaches a model to interpret one prompt as though it were another by minimizing KL divergence between student (with injection) and teacher (clean) outputs. After baking, the model learns to ignore prompt injections and analyze profiles objectively.
+Baking is a technique that teaches an LLM to interpret one prompt as though it were another by minimizing KL divergence between student (with injection) and teacher (clean) outputs. After baking, the model learns to ignore prompt injections and analyze profiles objectively.
 
 ## Project Structure
 
